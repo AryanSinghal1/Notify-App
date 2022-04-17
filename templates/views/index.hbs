@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTIFY</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  {{>navbar}}
+  <div class="main">
+    <div class="content">
+      <img src="Images/diary.png" />
+      <h1>Live Your Life A Hassle-Free Way</h1>
+      <h2>Start by creating a Note</h2>
+      <button class="btn">
+        <a href="#main-content">Click to create one</a>
+      </button>
+    </div>
+  </div>
+  <div id="main-content">
+    <h1><u>Your Notes</u></h1>
+    <div class="notes-container">
+      <div class="all-notes">
+        <div class="note-div">
+          <img src="Images/plus.png"/>
+        </div>
+      </div>
+    </div>
+    <div class="create-container">
+      <div class="note-container">
+        <div class="note-container1">
+          <h3>Enter Title</h3>
+          <input type="text" id="title" placeholder="Enter Title" />
+          <h3>Enter Description</h3>
+          <textarea type="text" id="desc" placeholder="Enter Description" rows="4" cols="50"></textarea>
+          <div class="btns">
+            <button id="create" class="btn1">Create</button>
+            <button id="exit" class="btn1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="create-container create-container1">
+      <div class="note-container">
+        <div class="note-container1">
+          <div id="edit-title"></div>
+          <div id="edit-desc"></div>
+          <div class="btns btns2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="create-container create-container2">
+      <div class="note-container">
+        <div class="note-container1">
+          <h3>Enter Title</h3>
+          <input type="text" id="title-edit" placeholder="Enter Title" />
+          <h3>Enter Description</h3>
+          <textarea type="text" id="desc-edit" placeholder="Enter Description" rows="4" cols="50"></textarea>
+          
+          <div class="btns btns3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="deleted-content">
+    <h1><u>Deleted Notes</u></h1>
+    <button class="exitBtn">Exit</button>
+    <div class="notes-container del">
+      <div class="all-notes1">
+      </div>
+    </div>
+    </div>
+    {{>footer}}
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    {{>navbar}}
+    <div class="forms">
+    <div class="form">
+        <form class="container" action="/register" method="POST">
+        <div class="formField registerText">
+        <h1>Register</h1>
+        <p>You are just a step away</p>
+        </div>
+        <div class="formField">
+        <input class="formInputs" type="text" name="name" placeholder="Enter Name" required>
+        </div>
+        <div class="formField">
+        <input class="formInputs" type="email" name="email" placeholder="Enter Email" required>
+        </div>
+        <div class="formField">
+        <input class="formInputs" type="password" name="password" placeholder="Enter Password" required>
+        </div>
+        <div class="formField">
+        <input class="formInputs" type="password" name="cpassword" placeholder="Re-Enter Password" required>
+        </div>
+        <div class="formField">
+        <input class="registerBtn" type="submit" value="Register">
+        </div>
+        </form>
+    </div>
+    <p class="registerLink">Already Registered? <a href="/">Login</a></p>
+    </div>
+    {{>footer}}
+</body>
+</html>
