@@ -57,7 +57,7 @@ app.post("/", async (req, res) => {
         console.log(`Password is ${registered.password}`);
         const isVerified = await bcrypt.compare(req.body.password, registered.password);
         // const bpswrd =  bcrypt.hash(req.body.password);
-        console.log(`Password becomes ${typeof(req.body.password)} ${typeof(registered.password)}`);
+        console.log(`Password becomes ${req.body.password} ${registered.password}`);
         console.log(isVerified);
         if(isVerified){
             res.render("index");

@@ -40,8 +40,10 @@ personSchema.methods.generateToken = async function(){
     }
 }
 personSchema.pre("save", async function(next){
+    if(this.isModified('password')){
     this.password =  await bcrypt.hash(this.password, 10);
-    console.log(this.password);
+    }
+    console.log(`It is ${this.password}`);
     next();
 })
 const personModel = new mongoose.model("person", personSchema);
